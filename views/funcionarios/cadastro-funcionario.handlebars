@@ -1,0 +1,29 @@
+<h3>Cadastrar funcionario: </h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/usuario/cadastro-funcionario" method="POST">
+            <label for="nome">Nome: </label>
+                <input type="text" name="nome" class="form-control" required>
+            <label for="data_nascimento">Data de nascimento: </label>
+                <input type="date" name="data_nascimento" class="form-control" required>
+            <label for="rg">RG: </label>
+                <input type="text" name="rg" class="form-control" required>
+            <label for="cpf">CPF: </label>
+                <input type="text" name="cpf" class="form-control" required>
+            <label for="telefone_1">Telefone: </label>
+                <input type="text" name="telefone_1" class="form-control" required>
+            <label for="telefone_2">Telefone 2: </label>
+                <input type="text" name="telefone_2" class="form-control">
+            <label for="email">Email: </label>
+                <input type="email" name="email" class="form-control" required>
+            <label for="nivel_usuario">Função: </label>
+                <select name="nivel_usuario" class="custom-select" required>
+                    <option value="0">Atendente</option>
+                    <option value="1">Clínico</option>
+                    <option value="2">Gerente</option>
+                    <option value="3">Administrador</option>
+                </select>
+            <button class="btn btn-success mt-4" type="submit">Cadastrar</button>
+        </form>
+    </div>
+</div>

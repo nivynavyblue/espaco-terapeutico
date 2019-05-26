@@ -1,0 +1,17 @@
+<h3>Desativar evento: </h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/desativar-evento" method="POST">
+            <input type="text" name="id" value="{{evento._id}}" hidden>
+            <label for="titulo">Título: </label>
+                <input type="text" value="{{evento.titulo}}" class="form-control" disabled>
+            <label for="descricao">Descrição: </label>
+                <textarea name="descricao" class="form-control" disabled>{{evento.descricao}}</textarea>
+            <label for="data">Data: </label>
+                <input type="date" value="{{dateFormatiso evento.data}}" class="form-control" disabled>
+            <label for="horario">Horário: </label>
+                <input type="time" value="{{evento.horario}}" class="form-control" disabled>
+            <button class="btn btn-danger mt-4" type="submit">Desativar</button>
+        </form>
+    </div>
+</div>

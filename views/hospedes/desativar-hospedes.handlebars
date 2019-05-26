@@ -1,0 +1,44 @@
+ <h3>Desativar hóspede: </h3>
+<div class="card">
+    <div class="card-body">
+        <h5>Buscar hóspede:</h5>
+        <form action="/usuario/busca-desativar-hospedes" method="POST">
+            <label for="busca_cpf">CPF: </label>
+                <input type="text" name="busca_cpf" class="form-control">
+            <button type="submit" class="btn btn-success mt-3">Buscar</button>
+        </form>
+    </div>
+</div>
+<hr>
+{{#if hospede}}
+<div class="card">
+    <div class="card-body">
+        <form action="/usuario/desativar-hospedes" method="POST">
+                <input type="text" name="cpf_antigo" hidden value="{{hospede.cpf}}">
+            <label for="nome">Nome: </label>
+                <input type="text" name="nome" class="form-control" value="{{hospede.nome}}" required disabled>
+            <label for="data_nascimento">Data de nascimento: </label>
+                <input disabled type="date" name="data_nascimento" value="{{dateFormatiso hospede.data_nascimento}}" class="form-control" required>
+            <label for="rg">RG: </label>
+                <input disabled type="text" name="rg" value="{{hospede.rg}}" class="form-control" required>
+            <label for="cpf">CPF: </label>
+                <input  disabled type="text" name="cpf" value="{{hospede.cpf}}" class="form-control" required>
+            <label for="telefone_1">Telefone: </label>
+                <input disabled type="text" name="telefone_1" value="{{hospede.telefone_1}}" class="form-control" required>
+            <label for="telefone_2">Telefone 2: </label>
+                <input disabled type="text" name="telefone_2" value="{{hospede.telefone_2}}" class="form-control">
+            <label for="email">Email: </label>
+                <input disabled type="email" name="email" value="{{hospede.email}}" class="form-control" required>
+            <label for="observacoes">Observações:</label>
+                <textarea disabled name="observacoes" class="form-control" rows="5"></textarea>
+            <button class="btn btn-danger mt-4" type="submit">Desativar</button>
+        </form>
+    </div>
+</div>
+{{else}}
+<div class="card">
+    <div class="card-body">
+        <p>Busque pelo CPF para editar um cadastro!</p>
+    </div>
+</div>
+{{/if}}

@@ -1,0 +1,15 @@
+<h3>Alterar senha: </h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/usuario/alterar-senha" method="POST">
+            <input type="hidden" name="id" value="{{user.id}}" required>
+            <label for="nome">Nome: </label>
+                <input type="text" name="nome" class="form-control" value="{{user.nome}}" disabled required>
+            <label for="senha_nova1">Nova senha: </label>
+                <input type="password" name="senha_nova1" class="form-control" required>
+            <label for="senha_nova2">Repita a nova senha: </label>
+                <input type="password" name="senha_nova2" class="form-control" required>
+            <button class="btn btn-success mt-4" type="submit">Alterar Senha</button>
+        </form>
+    </div>
+</div>

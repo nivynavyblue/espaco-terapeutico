@@ -1,0 +1,49 @@
+<h3>Desativar funcionario: </h3>
+<div class="card">
+    <div class="card-body">
+        <h5>Buscar funcionario:</h5>
+        <form action="/usuario/busca-desativar-usuario" method="POST">
+            <label for="busca_cpf">CPF: </label>
+                <input type="text" name="busca_cpf" class="form-control">
+            <button type="submit" class="btn btn-success mt-3">Buscar</button>
+        </form>
+    </div>
+</div>
+<hr>
+{{#if usuario}}
+<div class="card">
+    <div class="card-body">
+        <form action="/usuario/desativar-usuario" method="POST">
+            <label for="nome">Nome: </label>
+                <input type="text" name="a" class="form-control" value="{{usuario.nome}}" disabled required>
+                <input type="text" name="nome" class="form-control" value="{{usuario.nome}}" hidden required>
+                <input type="date" name="data_nascimento" hidden value="{{dateFormatiso usuario.data_nascimento "dd-mm-yyyy"}}" class="form-control" required>
+            <label for="rg">RG: </label>
+                <input type="text" name="b" value="{{usuario.rg}}" class="form-control" disabled required>
+                <input type="text" name="rg" value="{{usuario.rg}}" class="form-control" hidden required>
+            <label for="cpf">CPF: </label>
+                <input type="text" name="c" value="{{usuario.cpf}}" class="form-control" disabled required>
+                <input type="text" name="cpf" value="{{usuario.cpf}}" class="form-control" hidden required>
+                <input type="text" hidden name="telefone_1" value="{{usuario.telefone_1}}" class="form-control" required>
+                <input type="text" hidden name="telefone_2" value="{{usuario.telefone_2}}" class="form-control">
+                <input type="email" hidden name="email" value="{{usuario.email}}" class="form-control" required>
+            <label for="nivel_usuario">Função: </label>
+                <select name="nivel_usuario" class="custom-select" disabled required>
+                    {{#select usuario.nivel_usuario}}
+                    <option value="0">Atendente</option>
+                    <option value="1">Clínico</option>
+                    <option value="2">Gerente</option>
+                    <option value="3">Administrador</option>
+                    {{/select}}
+                </select>
+            <button class="btn btn-danger mt-4" type="submit">Desativar</button>
+        </form>
+    </div>
+</div>
+{{else}}
+<div class="card">
+    <div class="card-body">
+        <p>Busque pelo CPF para desativar um cadastro!</p>
+    </div>
+</div>
+{{/if}}

@@ -1,0 +1,24 @@
+{{#if usuarios}}
+    <h3>Agendar atendimento:</h3>
+<div class="card">
+<div class="card-body">
+
+    <div class="container">
+        {{#grouped_each 3 usuarios}}
+            <div class="row">
+                {{#each this}}
+                    {{#ifcond nivel_usuario '==' 1}}
+                        <div class="col" style="padding: 2%;text-align:center;">
+                            <h5>{{nome}}</h5>
+                            <a href="/usuario/agendar-atendimento/{{_id}}"><button class="btn btn-info">Agendar</button></a>
+                        </div>
+                    {{/ifcond}}
+                {{/each}}
+            </div>
+        {{/grouped_each}}
+    </div>
+</div>
+</div>
+{{else}}
+
+{{/if}}

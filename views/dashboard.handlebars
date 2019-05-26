@@ -1,0 +1,27 @@
+<h2 style="text-align: center">Bem vindo ao sistema Terra Sol!</h2>
+<hr>
+<h3>Próximos eventos: </h3>
+<div class="card">
+    <div class="card-body">
+        <a href="/admin/cadastro-evento"><button class="btn btn-success">Criar Evento</button></a>
+        <hr>
+        {{#each eventos}}
+            {{#ifcond acontecer '==' true}}
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h4>{{titulo}}</h4>
+                        <hr>
+                        <p>{{descricao}}</p>
+                        <small class="mt-4">Data: {{dateFormat data "dd-mm-yyyy"}}</small><br>
+                        <small class="mt-2">Horário: {{horario}}</small>
+                        <hr>
+                        <a href="/admin/alterar-evento/{{_id}}"><button class="btn btn-success mt-2">Editar</button></a>
+                        <a href="/admin/desativar-evento/{{_id}}"><button class="btn btn-danger mt-2">Desativar</button></a>
+                    </div>
+                </div>
+            {{/ifcond}}
+        {{else}}
+            <h5>Nenhum evento!</h5>
+        {{/each}}
+    </div>
+</div>

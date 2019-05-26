@@ -1,0 +1,24 @@
+<h3>Cadastrar hóspedes: </h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/usuario/cadastro-hospedes" method="POST">
+            <label for="nome">Nome: </label>
+                <input type="text" name="nome" class="form-control" required>
+            <label for="data_nascimento">Data de nascimento: </label>
+                <input type="date" name="data_nascimento" class="form-control" required>
+            <label for="rg">RG: </label>
+                <input type="text" name="rg" class="form-control" required>
+            <label for="cpf">CPF: </label>
+                <input type="text" name="cpf" class="form-control" required>
+            <label for="telefone_1">Telefone: </label>
+                <input type="text" name="telefone_1" class="form-control" required>
+            <label for="telefone_2">Telefone 2: </label>
+                <input type="text" name="telefone_2" class="form-control">
+            <label for="email">Email: </label>
+                <input type="email" name="email" class="form-control" required>
+            <label for="observacoes">Observações:</label>
+                <textarea name="observacoes" class="form-control" rows="4"></textarea>
+            <button class="btn btn-success mt-4" type="submit">Cadastrar</button>
+        </form>
+    </div>
+</div>

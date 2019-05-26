@@ -1,0 +1,24 @@
+<h3>Consultas marcadas:</h3>
+<hr>
+<div class="card">
+<div class="card-body">
+    <div class="container">
+        {{#grouped_each 3 consultas}}
+            <div class="row">
+                {{#each this}}
+                    <div class="col" style="padding: 2%;">
+                        <hr>
+                        <p><strong>Clínico:</strong> {{clinico.nome}}</p>
+                        <p><strong>Cliente:</strong> {{cliente.nome}}</p>
+                        <p><strong>Serviço:</strong> {{servico.nome}}</p>
+                        <p><strong>Sala: </strong> {{sala}}</p>
+                        <small>Horário: {{horario}}</small><br>
+                        <small>Data: {{dateFormat data_consulta}}</small>
+                        <hr>
+                    </div>
+                {{/each}}
+            </div>
+        {{/grouped_each}}
+    </div>
+</div>
+</div>

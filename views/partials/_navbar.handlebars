@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/dashboard">Terra Sol</a>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto mx-5">
+        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Funcionarios
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/usuario/cadastro-funcionario">Cadastrar</a>
+                <a class="dropdown-item" href="/usuario/alterar-funcionario">Alterar</a>
+                <a class="dropdown-item" href="/usuario/desativar-funcionario">Desativar</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown mx-3">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clínicos
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/usuario/servicos">Serviços</a>
+                <a class="dropdown-item" href="/usuario/escolher-clinico">Agendar atendimento</a>
+                <a class="dropdown-item" href="/usuario/atendimentos-marcados">Atendimentos marcados</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Hóspedes
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/usuario/cadastro-hospedes">Cadastrar</a>
+                <a class="dropdown-item" href="/usuario/alterar-hospedes">Alterar</a>
+                <a class="dropdown-item" href="/usuario/desativar-hospedes">Desativar</a>
+                <hr>
+                <a class="dropdown-item" href="/usuario/desativar-funcionario">Entrada e saída</a>
+                <a class="dropdown-item" href="/usuario/desativar-funcionario">Relatório de estadia</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Quartos
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/usuario/cadastro-funcionario">Cadastrar</a>
+                <a class="dropdown-item" href="/usuario/alterar-funcionario">Alterar</a>
+                <a class="dropdown-item" href="/usuario/desativar-funcionario">Desativar</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Produtos
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/usuario/cadastro-funcionario">Cadastrar</a>
+                <a class="dropdown-item" href="/usuario/alterar-funcionario">Alterar</a>
+                <a class="dropdown-item" href="/usuario/desativar-funcionario">Desativar</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mx-3" href="#">Check-in e Check-out</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav mr-auto mr-sm-2">
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{user.nome}}
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/usuario/alterar-senha">Alterar senha</a>
+                <a class="dropdown-item" href="/logout">Sair</a>
+            </div>
+        </li>
+    </ul>
+  </div>
+</nav>

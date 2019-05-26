@@ -1,0 +1,17 @@
+<h3>Alterar evento: </h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/alterar-evento" method="POST">
+            <input name="id" type="text" value="{{evento._id}}" hidden>
+            <label for="titulo">Título: </label>
+                <input type="text" name="titulo" class="form-control" value="{{evento.titulo}}" required>
+            <label for="descricao">Descrição: </label>
+                <textarea name="descricao" class="form-control">{{evento.descricao}}</textarea>
+            <label for="horario">Horário: </label>
+                <input type="time" name="horario" value="{{evento.horario}}" class="form-control" required>
+            <label for="data">Data: </label>
+                <input type="date" name="data" value="{{dateFormatiso evento.data}}" class="form-control" required>
+            <button class="btn btn-success mt-4" type="submit">Alterar</button>
+        </form>
+    </div>
+</div>

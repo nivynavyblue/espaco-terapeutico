@@ -1,0 +1,25 @@
+<h3>Serviços:</h3>
+<div class="card">
+    <div class="card-body">
+        <a href="/usuario/cadastro-servico"><button class="btn btn-success">Cadastrar</button></a>
+        <hr>
+        {{#if servicos}}
+        {{#each servicos}}
+            {{#ifcond ativo "==" true}}
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h4>{{nome}}</h4>
+                        <hr>
+                        <p style="text-align:justify">{{descricao}}</p>
+                        <p>R$ {{valor}}</p>
+                        <a href="/usuario/alterar-servico/{{_id}}"<button class="btn btn-success mt-2">Alterar</button></a>
+                        <a href="/usuario/desativar-servico/{{_id}}"<button class="btn btn-danger mt-2">Desativar</button></a>
+                    </div>
+                </div>
+            {{/ifcond}}
+        {{/each}}
+        {{else}}
+            <p>Sem tecnicas cadastradas.</p>
+        {{/if}}
+    </div>
+</div>

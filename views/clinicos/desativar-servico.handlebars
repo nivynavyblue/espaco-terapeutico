@@ -1,0 +1,15 @@
+<h3>Desativar serviço: </h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/usuario/desativar-servico" method="post">
+            <input type="text" name="id" value="{{servico._id}}" hidden>
+            <label for="titulo">Nome: </label>
+                <input type="text" name="titulo" class="form-control" value="{{servico.nome}}" required disabled>
+            <label for="descricao">Descrição: </label>
+                <textarea name="descricao" class="form-control" disabled>{{servico.descricao}}</textarea>
+            <label for="valor">Valor: </label>
+                <input type="string" name="valor" value="{{servico.valor}}" class="form-control" disabled required>
+            <button class="btn btn-danger mt-4" type="submit">Desativar</button>
+        </form>
+    </div>
+</div>
